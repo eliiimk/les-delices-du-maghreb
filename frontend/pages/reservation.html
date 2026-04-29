@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver une table | Les Délices du Maghreb</title>
+    <meta name="description" content="Réservez votre table chez Les Délices du Maghreb.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/delices.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="delices.html">
+                <img src="../img/logo.png" alt="Les Délices du Maghreb" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="menu.html">Menu</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="commander.html" class="btn btn-commander">Commander</a>
+    </header>
+
+    <main class="reservation-main">
+        <div class="reservation-nav">
+            <a href="delices.html" class="btn-retour">Retour à l'accueil</a>
+        </div>
+
+        <div class="reservation-container">
+            <!-- Left Column: Form -->
+            <div class="reservation-form-card">
+                <div class="res-tag">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    <span>RÉSERVATION</span>
+                </div>
+                <h1 class="res-title">Réserver une table</h1>
+                
+                <form class="res-form" id="form-reservation">
+                    <div class="form-row">
+                        <input type="text" id="res-nom" placeholder="Nom" required>
+                        <input type="tel" id="res-telephone" placeholder="Téléphone" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="res-date" placeholder="Date" onfocus="(this.type='date')" required>
+                        <input type="text" id="res-heure" placeholder="Heure" onfocus="(this.type='time')" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="number" id="res-personnes" placeholder="Nombre de Personnes" min="1" required class="full-width">
+                    </div>
+                    <div class="form-row">
+                        <textarea id="res-message" placeholder="Message ou demande spéciale" rows="3" class="full-width"></textarea>
+                    </div>
+                    <div id="res-feedback" style="display:none; padding: 1rem 1.5rem; border-radius: 12px; font-weight: 600; margin-bottom: 1rem;"></div>
+                    <button type="submit" class="btn btn-commander submit-res">Confirmer la réservation</button>
+                </form>
+            </div>
+
+            <!-- Right Column: Info blocks -->
+            <div class="reservation-info">
+                <!-- Info block: Pourquoi réserver -->
+                <div class="info-card dark-card">
+                    <h3>Pourquoi réserver ?</h3>
+                    <ul>
+                        <li>Places garanties aux heures de pointe</li>
+                        <li>Service rapide pour familles et groupes</li>
+                        <li>Ambiance chaleureuse et premium</li>
+                    </ul>
+                </div>
+
+                <!-- Info block: Infos pratiques -->
+                <div class="info-card light-card">
+                    <h3>Infos pratiques</h3>
+                    <div class="info-item">
+                        <svg width="24" height="24" fill="none" stroke="var(--brand-color)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <p>Mardi a Jeudi : 11h00 – 15h00 / 18h00-23h00<br>Vendredi a Dimanche : 11h00 – 23h00</p>
+                    </div>
+                    <div class="info-item">
+                        <svg width="24" height="24" fill="none" stroke="var(--brand-color)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <p>10 Rue Jean Jaurès, 78190 Trappes</p>
+                    </div>
+                    <div class="info-item">
+                        <svg width="24" height="24" fill="none" stroke="var(--brand-color)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <p>+33 1 71 49 80 95</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    document.getElementById('form-reservation').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const feedback = document.getElementById('res-feedback');
+        const btn = this.querySelector('button[type="submit"]');
+
+        const body = {
+            nom:       document.getElementById('res-nom').value,
+            telephone: document.getElementById('res-telephone').value,
+            date:      document.getElementById('res-date').value,
+            heure:     document.getElementById('res-heure').value,
+            personnes: document.getElementById('res-personnes').value,
+            message:   document.getElementById('res-message').value
+        };
+
+        btn.textContent = 'Envoi en cours...';
+        btn.disabled = true;
+
+        try {
+            const res = await fetch('http://localhost:3000/api/reservations', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            const data = await res.json();
+
+            feedback.style.display = 'block';
+            if (data.success) {
+                feedback.style.backgroundColor = '#d1fae5';
+                feedback.style.color = '#065f46';
+                feedback.textContent = data.message;
+                this.reset();
+            } else {
+                feedback.style.backgroundColor = '#fee2e2';
+                feedback.style.color = '#991b1b';
+                feedback.textContent = data.message || 'Une erreur est survenue.';
+            }
+        } catch (err) {
+            feedback.style.display = 'block';
+            feedback.style.backgroundColor = '#fee2e2';
+            feedback.style.color = '#991b1b';
+            feedback.textContent = 'Impossible de contacter le serveur. Vérifiez que le backend est démarré.';
+        } finally {
+            btn.textContent = 'Confirmer la réservation';
+            btn.disabled = false;
+        }
+    });
+    </script>
+</body>
+</html>

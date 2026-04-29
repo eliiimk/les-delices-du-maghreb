@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Carte | Les Délices du Maghreb</title>
+    <meta name="description" content="Découvrez notre carte complète : Entrées, Tajines, Couscous, Grillades et plus !">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/delices.css">
+    <style>
+        .menu-category-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--brand-color);
+            margin: 3rem 0 1.5rem;
+            border-bottom: 2px solid var(--badge-bg);
+            padding-bottom: 0.5rem;
+        }
+        .menu-detail-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn-add {
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="delices.html">
+                <img src="../img/logo.png" alt="Les Délices du Maghreb" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="menu.html">Menu</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="commander.html" class="btn btn-commander">Commander</a>
+    </header>
+
+    <main class="menu-page-main">
+        <div class="reservation-nav">
+            <a href="delices.html" class="btn-retour">Retour à l'accueil</a>
+        </div>
+
+        <div class="menu-page-header">
+            <div class="menu-page-title-box">
+                <span class="res-tag">NOTRE CARTE COMPLÈTE</span>
+                <h1 class="res-title">Découvrez tous nos plats</h1>
+            </div>
+            <p class="menu-page-subtitle">Des classiques marocains préparés avec passion et authenticité. Laissez-vous tenter par nos recettes familiales.</p>
+        </div>
+
+        <h2 class="menu-category-title">Nos Entrées</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Brick Poulet</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">4,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Vermicelles, poulet, oignons, poivrons</p>
+                    <button class="btn-add" data-price="4.5" data-name="Brick Poulet">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Brick Viande Hachée</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">4,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Viande hachée, oignons, poivrons</p>
+                    <button class="btn-add" data-price="4.5" data-name="Brick Viande Hachée">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Chakchouka (Petite)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">4,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Poivrons, oignons, tomates</p>
+                    <button class="btn-add" data-price="4" data-name="Chakchouka (Petite)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Chakchouka (Grande)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Poivrons, oignons, tomates</p>
+                    <button class="btn-add" data-price="6" data-name="Chakchouka (Grande)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Salades Marocaine</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Tomates et oignons</p>
+                    <button class="btn-add" data-price="6" data-name="Salades Marocaine">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Soupe de poissons</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Merlan, crevette, calamar, courgette, carotte</p>
+                    <button class="btn-add" data-price="6.5" data-name="Soupe de poissons">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Harira au boeuf</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">7,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Soupe aux pois chiche, boeuf, lentilles, vermicelle...</p>
+                    <button class="btn-add" data-price="7.5" data-name="Harira au boeuf">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Bol Lentille</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="6.5" data-name="Bol Lentille">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Bol Loubia</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="6.5" data-name="Bol Loubia">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Brick salade</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Poulet ou Viande hachée</p>
+                    <button class="btn-add" data-price="6.5" data-name="Brick salade">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Salade Poulet</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">8,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Salade, tomate, oignons, poulet, oeuf</p>
+                    <button class="btn-add" data-price="8.9" data-name="Salade Poulet">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Salade Composée</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">7,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Salade, tomate, oignons, concombre, carotte, oeuf</p>
+                    <button class="btn-add" data-price="7.5" data-name="Salade Composée">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Salade Fruit de Mer</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">8,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Salade, tomate, avocat, crevettes, maïs, carotte</p>
+                    <button class="btn-add" data-price="8.9" data-name="Salade Fruit de Mer">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Tajines</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajines Kefta Oeufs</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">13,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Boulette de kefta, tomate, oignons, poivrons</p>
+                    <button class="btn-add" data-price="13.9" data-name="Tajines Kefta Oeufs">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajine Poulet Olives</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Cuisse de poulet, oignons, olives</p>
+                    <button class="btn-add" data-price="14.9" data-name="Tajine Poulet Olives">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajine Poulet Légumes</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Cuisse de poulet, pomme de terre, carottes, petits-pois...</p>
+                    <button class="btn-add" data-price="14.9" data-name="Tajine Poulet Légumes">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajines Agneau légumes</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">18,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Viande d'agneau, pomme de terre, pruneaux, carottes...</p>
+                    <button class="btn-add" data-price="18.9" data-name="Tajines Agneau légumes">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajine Agneau pruneaux</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">18,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Viande d'agneau, oignons, pruneaux, amandes</p>
+                    <button class="btn-add" data-price="18.9" data-name="Tajine Agneau pruneaux">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Spécialités</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Rfissa</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">16,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Poulet, lentilles, fenugrec, oignons, msemen</p>
+                    <button class="btn-add" data-price="16.9" data-name="Rfissa">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Lentilles (sans viande)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">8,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Lentilles, carotte</p>
+                    <button class="btn-add" data-price="8.9" data-name="Lentilles (sans viande)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Lentilles au boeuf</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">12,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Lentilles, carotte, viande de boeuf</p>
+                    <button class="btn-add" data-price="12.9" data-name="Lentilles au boeuf">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Loubia (sans viande)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">8,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Haricot blanc, carotte</p>
+                    <button class="btn-add" data-price="8.9" data-name="Loubia (sans viande)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Loubia au boeuf</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">12,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Haricot blanc, carotte, viande de boeuf</p>
+                    <button class="btn-add" data-price="12.9" data-name="Loubia au boeuf">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajine Poisson</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">15,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Au choix : Thon, Panga, espadon. Tomate, oignons...</p>
+                    <button class="btn-add" data-price="15.9" data-name="Tajine Poisson">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tajine Cap de l'Eau</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">15,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Crevettes, sauce tomate, poivrons, olive</p>
+                    <button class="btn-add" data-price="15.9" data-name="Tajine Cap de l'Eau">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Grillades</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Merguez</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">3 pièces</p>
+                    <button class="btn-add" data-price="14.5" data-name="Merguez">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Brochette de Poulet</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">2 pièces</p>
+                    <button class="btn-add" data-price="14.5" data-name="Brochette de Poulet">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Brochette Kefta</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">2 pièces</p>
+                    <button class="btn-add" data-price="14.5" data-name="Brochette Kefta">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Menu Enfant</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Menu Enfant</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">8,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Nuggets ou brochette de poulet + Frites ou Riz + Caprisun</p>
+                    <button class="btn-add" data-price="8.9" data-name="Menu Enfant">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Couscous</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Couscous Végétarienne</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">9,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Semoule, navet, citrouille, courgette, carotte, pois-chiche</p>
+                    <button class="btn-add" data-price="9.9" data-name="Couscous Végétarienne">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Couscous merguez</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Merguez, semoule, navet, citrouille...</p>
+                    <button class="btn-add" data-price="14.9" data-name="Couscous merguez">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Couscous Poulet</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">14,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Cuisse de poulet, semoule, navet...</p>
+                    <button class="btn-add" data-price="14.9" data-name="Couscous Poulet">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Couscous Agneau</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">18,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Viande d'agneau, semoule, navet...</p>
+                    <button class="btn-add" data-price="18.9" data-name="Couscous Agneau">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Couscous Royal</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">20,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Viande de boeuf, cuisse de poulet, merguez, semoule...</p>
+                    <button class="btn-add" data-price="20.9" data-name="Couscous Royal">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Plats de Poisson</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Calamar ou Crevette ou Sardines</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">13,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">environ 300g</p>
+                    <button class="btn-add" data-price="13.9" data-name="Calamar ou Crevette ou Sardines">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Mixte</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">18,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Rouget, sardines, crevettes, calamar, merlan environ 500g</p>
+                    <button class="btn-add" data-price="18.9" data-name="Mixte">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Rouget</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">13,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">environ 300g</p>
+                    <button class="btn-add" data-price="13.9" data-name="Rouget">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Dorade</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">15,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="15.9" data-name="Dorade">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Filet de Panga ou Cabillaud</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">12,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="12.9" data-name="Filet de Panga ou Cabillaud">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Espadon</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">16,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="16.9" data-name="Espadon">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Saumon</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">16,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="16.9" data-name="Saumon">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Composition d'assortiments</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">27,90€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">27,90€ le Kg. Selon disponibilités sans accompagnement</p>
+                    <button class="btn-add" data-price="27.9" data-name="Composition d'assortiments">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Desserts & Glaces</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tiramisu du Jour</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">3,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Framboise, Coco, Oréo, Kinder bueno, Nutella, Spéculoos...</p>
+                    <button class="btn-add" data-price="3.5" data-name="Tiramisu du Jour">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Tarte du Jour</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">3,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Daim, Flan, Citron, Framboise</p>
+                    <button class="btn-add" data-price="3" data-name="Tarte du Jour">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Msemen</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">3,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Crêpe marocaine à la semoule</p>
+                    <button class="btn-add" data-price="3" data-name="Msemen">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Pâtisseries Maghrébines</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">2,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Makroud, Chebakia, Kelb el louz ou autres</p>
+                    <button class="btn-add" data-price="2" data-name="Pâtisseries Maghrébines">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Glace 1 boule</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">2,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">avec coulis</p>
+                    <button class="btn-add" data-price="2.5" data-name="Glace 1 boule">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Glace 2 boules</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">4,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">avec coulis</p>
+                    <button class="btn-add" data-price="4" data-name="Glace 2 boules">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Glace 3 boules</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">avec coulis</p>
+                    <button class="btn-add" data-price="6.5" data-name="Glace 3 boules">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="menu-category-title">Nos Boissons</h2>
+        <div class="menu-page-grid" style="margin-bottom: 3rem;">
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Boissons 50cl</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">3,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Coca-Cola, Oasis, Fanta...</p>
+                    <button class="btn-add" data-price="3" data-name="Boissons 50cl">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Jus de fruits</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">4,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">Orange, Avocat, Citron...</p>
+                    <button class="btn-add" data-price="4.5" data-name="Jus de fruits">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Thé à la menthe (verre)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">2,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="2" data-name="Thé à la menthe (verre)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Théière à la menthe (Petite)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">6,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="6" data-name="Théière à la menthe (Petite)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Théière à la menthe (Grande)</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">11,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="11" data-name="Théière à la menthe (Grande)">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Café</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">2,00€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;">sur place (1,50€ à emporter)</p>
+                    <button class="btn-add" data-price="2" data-name="Café">Ajouter à la commande</button>
+                </div>
+            </div>
+            <div class="menu-card menu-detail-card" style="padding: 1.5rem; border: 1px solid #EEE; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                <div class="menu-card-content" style="padding: 0; min-height: 120px; display: flex; flex-direction: column;">
+                    <div class="card-header-row" style="align-items: flex-start;">
+                        <h3 style="font-size: 1.1rem; padding-right: 1rem;">Café au lait</h3>
+                        <span class="price" style="white-space: nowrap; font-size: 1.1rem;">2,50€</span>
+                    </div>
+                    <p style="margin-bottom: 1.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <button class="btn-add" data-price="2.5" data-name="Café au lait">Ajouter à la commande</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

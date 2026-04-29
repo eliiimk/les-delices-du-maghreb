@@ -1,0 +1,196 @@
+/* Base Reset & Variables */
+:root {
+    --bg-tradition: #F6EFE5; /* Light Beige from mockup */
+    --text-tradition: #3E2413; /* Darker warm text */
+    --brand-tradition: #B05B35; /* Brown/Orange brand */
+
+    --bg-fastfood: #080808; /* Very dark black */
+    --text-fastfood: #B3B3B3; /* Light gray text */
+    --brand-fastfood: #FFFFFF;
+
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-main);
+    overflow-x: hidden;
+    background-color: var(--bg-fastfood); /* fallback background */
+}
+
+/* Container */
+.split-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Individual Panels */
+.split-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover dynamic for panels */
+@media (min-width: 769px) {
+    .split-panel:hover {
+        flex: 1.15;
+    }
+}
+
+.panel-content {
+    max-width: 450px;
+    z-index: 10;
+    /* Soft entrance animation */
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 0.8s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+}
+
+.panel-tradition .panel-content {
+    animation-delay: 0.15s;
+}
+
+.panel-fastfood .panel-content {
+    animation-delay: 0.35s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography */
+.panel-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.panel-desc {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+}
+
+/* Theme: Tradition */
+.panel-tradition {
+    background-color: var(--bg-tradition);
+    color: var(--brand-tradition);
+}
+
+.panel-tradition .panel-title {
+    color: var(--brand-tradition);
+}
+
+.panel-tradition .panel-desc {
+    color: var(--text-tradition);
+}
+
+/* Theme: Fast Food */
+.panel-fastfood {
+    background-color: var(--bg-fastfood);
+    color: var(--brand-fastfood);
+}
+
+.panel-fastfood .panel-title {
+    color: var(--brand-fastfood);
+}
+
+.panel-fastfood .panel-desc {
+    color: var(--text-fastfood);
+}
+
+/* Buttons */
+.panel-btn {
+    display: inline-block;
+    padding: 1.1rem 2.8rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px; /* Fully rounded buttons as in the image */
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tradition Button */
+.btn-trad {
+    background-color: var(--brand-tradition);
+    color: #FFFFFF;
+    border: 2px solid var(--brand-tradition);
+}
+
+.btn-trad:hover {
+    background-color: transparent;
+    color: var(--brand-tradition);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(176, 91, 53, 0.25);
+}
+
+/* Fastfood Button */
+.btn-fast {
+    background-color: transparent;
+    color: var(--brand-fastfood);
+    border: 1px solid var(--brand-fastfood);
+    letter-spacing: 1px;
+}
+
+.btn-fast:hover {
+    background-color: var(--brand-fastfood);
+    color: var(--bg-fastfood);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    .split-panel {
+        min-height: 50vh;
+        flex: none; /* Disable flex scaling on mobile */
+        padding: 3rem 2rem;
+    }
+
+    .panel-title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .panel-desc {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .split-panel:hover {
+       flex: none;
+    }
+}

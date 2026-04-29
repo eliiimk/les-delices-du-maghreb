@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord | Administration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+    <!-- Simple Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-box">
+            <h2>Administration</h2>
+            <p>Accès restreint. Veuillez vous identifier.</p>
+            <input type="password" id="admin-pwd" placeholder="Mot de passe">
+            <button id="btn-login">Connexion</button>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard Main -->
+    <div id="dashboard-app" style="display: none;">
+        
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h1>Les Délices / Ahmed</h1>
+                <p>Tableau de Bord</p>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-tab="tab-commandes">
+                    🛒 Commandes (Ahmed)
+                    <span class="badge" id="badge-commandes">0</span>
+                </button>
+                <button class="nav-btn" data-tab="tab-reservations">
+                    📅 Réservations (Délices)
+                    <span class="badge" id="badge-reservations">0</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../../index.html" class="btn-logout">Retour au site</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="topbar">
+                <h2 id="current-tab-title">Gestion des Commandes</h2>
+                <button id="btn-refresh" class="btn-refresh">🔄 Rafraîchir</button>
+            </header>
+
+            <!-- Tab Commandes -->
+            <section id="tab-commandes" class="tab-content active">
+                <div class="status-filters">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="nouvelle">Nouvelles</button>
+                    <button class="filter-btn" data-filter="en_preparation">En préparation</button>
+                    <button class="filter-btn" data-filter="prête">Prêtes</button>
+                </div>
+                
+                <div id="commandes-container" class="cards-grid">
+                    <!-- Loaded via JS -->
+                </div>
+            </section>
+
+            <!-- Tab Réservations -->
+            <section id="tab-reservations" class="tab-content">
+                <div class="status-filters">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="en_attente">En attente</button>
+                    <button class="filter-btn" data-filter="confirmée">Confirmées</button>
+                </div>
+
+                <div id="reservations-container" class="cards-grid">
+                    <!-- Loaded via JS -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

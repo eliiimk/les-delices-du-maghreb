@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Grillades de la Gare Chez Ahmed</title>
+    <meta name="description" content="Contactez Grillades de la Gare Chez Ahmed, la restauration rapide au 1 Rue Pierre Semard, Trappes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ahmed.css">
+    <style>
+        .contact-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 60vh;
+            border-bottom: 2px solid #EEE;
+        }
+
+        .contact-left {
+            padding: 6rem 4rem 6rem 8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-right {
+            background-color: #1E1E1E;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 4rem;
+            gap: 3rem;
+        }
+
+        .contact-tag {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .contact-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+            max-width: 380px;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-cta-block {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-call {
+            background-color: #000;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #000;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-call:hover {
+            background-color: transparent;
+            color: #000;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #000;
+            padding: 1rem 2.5rem;
+            border-radius: 0;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #000;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: #000;
+            color: white;
+        }
+
+        /* Right info blocks */
+        .info-block {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 2rem;
+            width: 100%;
+        }
+
+        .info-block:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .info-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .info-value small {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.6);
+            text-transform: none;
+            letter-spacing: 0;
+            margin-top: 0.3rem;
+        }
+
+        /* Map section */
+        .map-section {
+            border-top: 2px solid #EEE;
+            padding: 6rem 8rem;
+        }
+
+        .map-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 3rem;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 400px;
+            background-color: #F5F5F5;
+            border: 2px solid #000;
+            overflow: hidden;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(1);
+        }
+
+        /* Hours + Info grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 2px solid #000;
+            margin-top: 6rem;
+        }
+
+        .info-cell {
+            padding: 3rem;
+            border-right: 2px solid #000;
+        }
+
+        .info-cell:last-child {
+            border-right: none;
+        }
+
+        .info-cell-label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-cell-value {
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .info-cell-value small {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #555;
+            text-transform: none;
+            margin-top: 0.3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-hero {
+                grid-template-columns: 1fr;
+            }
+            .contact-left {
+                padding: 4rem 2rem;
+            }
+            .contact-right {
+                padding: 3rem 2rem;
+            }
+            .contact-title {
+                font-size: 2.8rem;
+            }
+            .map-section {
+                padding: 4rem 2rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-cell {
+                border-right: none;
+                border-bottom: 2px solid #000;
+            }
+            .info-cell:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+            .contact-cta-block {
+                flex-direction: column;
+            }
+            .btn-call, .btn-secondary {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="ahmed-header">
+        <div class="ahmed-logo"><a href="ahmed.html" style="color: inherit; text-decoration: none;">CHEZ AHMED</a></div>
+        <nav class="ahmed-nav">
+            <a href="ahmed.html#la-carte">La Carte</a>
+            <a href="contact-ahmed.html">Contact</a>
+            <a href="commander-ahmed.html" class="btn-panier" id="cart-btn">Commander</a>
+        </nav>
+    </header>
+
+    <!-- Hero Split Section -->
+    <section class="contact-hero">
+        <!-- Left: Title + CTA -->
+        <div class="contact-left">
+            <span class="contact-tag">Grillades de la Gare — Chez Ahmed</span>
+            <h1 class="contact-title">On est<br>là pour<br>vous.</h1>
+            <p class="contact-subtitle">Une question, une commande spéciale ou juste envie de savoir ce qu'on prépare ? Appelez-nous directement.</p>
+            <div class="contact-cta-block">
+                <a href="tel:0130503083" class="btn-call">Appeler</a>
+                <a href="ahmed.html#la-carte" class="btn-secondary">Voir la carte</a>
+            </div>
+        </div>
+
+        <!-- Right: Info blocks -->
+        <div class="contact-right">
+            <div class="info-block">
+                <span class="info-label">Téléphone</span>
+                <div class="info-value">01 30 50 30 83</div>
+            </div>
+            <div class="info-block">
+                <span class="info-label">Adresse</span>
+                <div class="info-value">
+                    1 Rue Pierre Semard
+                    <small>78190 Trappes, France</small>
+                </div>
+            </div>
+            <div class="info-block">
+                <span class="info-label">Horaires</span>
+                <div class="info-value">
+                    Tous les jours
+                    <small>11h — 00h00</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Grid -->
+    <div class="info-grid">
+        <div class="info-cell">
+            <span class="info-cell-label">Commandes</span>
+            <div class="info-cell-value">
+                Sur place ✓
+                <small>À emporter ✓ &nbsp;—&nbsp; Livraison ✗</small>
+            </div>
+        </div>
+        <div class="info-cell">
+            <span class="info-cell-label">Livraison</span>
+            <div class="info-cell-value">
+                Pas de livraison
+                <small>Commandez et venez chercher sur place</small>
+            </div>
+        </div>
+        <div class="info-cell">
+            <span class="info-cell-label">Réponse rapide</span>
+            <div class="info-cell-value">
+                Prix 1–10€ / pers.
+                <small>Restauration rapide — 228 avis Google</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <section class="map-section">
+        <h2>Nous trouver</h2>
+        <div class="map-wrapper">
+            <iframe
+                src="https://maps.google.com/maps?q=1+Rue+Pierre+Semard+78190+Trappes&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer class="ahmed-footer">
+        <h2>Prêt à Commander ?</h2>
+        <div style="margin-top: 2rem;">
+            <a href="commander-ahmed.html" class="btn-panier" style="display: inline-block; margin: 0 auto;">Commander maintenant</a>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+    <script>
+        function updateAhmedCartButton() {
+            const btn = document.getElementById('cart-btn');
+            if (btn) {
+                const globalCart = JSON.parse(localStorage.getItem('restaurant_cart')) || [];
+                if (globalCart.length > 0) {
+                    btn.textContent = `Mon Panier (${globalCart.length})`;
+                } else {
+                    btn.textContent = 'Commander';
+                }
+            }
+        }
+        window.addEventListener('storage', updateAhmedCartButton);
+        document.addEventListener('click', () => { setTimeout(updateAhmedCartButton, 100); });
+        updateAhmedCartButton();
+    </script>
+</body>
+</html>

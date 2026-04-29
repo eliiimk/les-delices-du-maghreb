@@ -1,0 +1,465 @@
+/* Styling for Chez Ahmed (Fast-Food) - Urban Black & White Design */
+:root {
+    --ahmed-bg: #FFFFFF;
+    --ahmed-text: #000000;
+    --brand-color: #000000;
+    --badge-bg: #EEE;
+    --badge-text: #000000;
+    --ahmed-dark: #1E1E1E;
+    --ahmed-font: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--ahmed-bg);
+    color: var(--ahmed-text);
+    font-family: var(--ahmed-font);
+    overflow-x: hidden;
+}
+
+/* Header */
+.ahmed-header {
+    background-color: white;
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #EEE;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.ahmed-logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.ahmed-nav {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ahmed-nav a {
+    text-decoration: none;
+    color: var(--ahmed-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: opacity 0.3s;
+}
+
+.ahmed-nav a:hover {
+    opacity: 0.6;
+}
+
+.ahmed-nav a.btn-panier {
+    color: white;
+}
+
+.btn-panier {
+    background-color: var(--ahmed-text);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-panier:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.ahmed-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.hero-text-side {
+    padding: 0 4rem 0 8rem;
+}
+
+.hero-tag {
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+    max-width: 450px;
+}
+
+.hero-img-side {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: contrast(1.1);
+}
+
+/* Menu Section */
+.ahmed-menu {
+    padding: 6rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.menu-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.ahmed-category-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin: 4rem 0 0.5rem;
+    border-bottom: 2px solid var(--ahmed-text);
+    padding-bottom: 0.8rem;
+}
+
+.ahmed-category-note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.ahmed-card small {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #555;
+    margin-top: 0.2rem;
+}
+
+.ahmed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.ahmed-card {
+    border: 2px solid #EEE;
+    padding: 2rem;
+    border-radius: 0;
+    transition: border-color 0.3s;
+}
+
+.ahmed-card:hover {
+    border-color: var(--ahmed-text);
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1.5rem;
+}
+
+.ahmed-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.ahmed-card .price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.ahmed-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.btn-add-ahmed {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--ahmed-text);
+    color: var(--ahmed-text);
+    padding: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-add-ahmed:hover {
+    background-color: var(--ahmed-text);
+    color: white;
+}
+
+/* Footer (Urban Style) */
+.ahmed-footer {
+    background-color: var(--ahmed-dark);
+    color: white;
+    padding: 4rem;
+    text-align: center;
+}
+
+.ahmed-footer h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .ahmed-hero {
+        grid-template-columns: 1fr;
+    }
+    .hero-text-side {
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+    .hero-desc {
+        margin: 0 auto;
+    }
+    .hero-img-side {
+        height: 500px;
+    }
+    .ahmed-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ahmed-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .ahmed-grid {
+        grid-template-columns: 1fr;
+    }
+    .ahmed-nav {
+        gap: 1.5rem;
+    }
+}
+
+/* Commander Page Styling - Ahmed Style */
+.commande-page-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.commande-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.commande-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.commande-item-card {
+    background-color: white;
+    border: 2px solid var(--ahmed-text);
+    border-radius: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commande-item-info h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.commande-item-info p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.commande-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qty-btn {
+    background-color: transparent;
+    border: 2px solid var(--ahmed-text);
+    border-radius: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 800;
+    transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+    background-color: var(--ahmed-text);
+    color: white;
+}
+
+.qty-val {
+    font-weight: 800;
+    font-size: 1.1rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.commande-item-price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--ahmed-text);
+}
+
+.empty-cart-msg {
+    color: var(--ahmed-text);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2rem;
+    background-color: white;
+    border: 2px solid var(--ahmed-text);
+    text-align: center;
+}
+
+/* Right Cart Section */
+.panier-card {
+    background-color: white;
+    padding: 3rem;
+    position: sticky;
+    top: 2rem;
+}
+
+.panier-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.icon-panier {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panier-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 100px;
+}
+
+.panier-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.panier-item-name {
+    color: var(--ahmed-text);
+    font-weight: 600;
+}
+
+.panier-item-price {
+    font-weight: 800;
+}
+
+.panier-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.btn-checkout {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.15rem;
+    transition: transform 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .commande-layout {
+        grid-template-columns: 1fr;
+    }
+    .panier-card {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .commande-page-main {
+        padding: 0 1.5rem;
+    }
+    .commande-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .commande-item-price {
+        align-self: flex-end;
+    }
+    .panier-card {
+        padding: 2rem;
+    }
+}

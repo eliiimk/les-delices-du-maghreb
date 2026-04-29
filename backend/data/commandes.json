@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1776170046798,
+    "nom": "Client",
+    "telephone": "",
+    "articles": [
+      {
+        "name": "Tajine Agneau Pruneaux",
+        "price": 22,
+        "quantity": 1
+      },
+      {
+        "name": "Couscous Royal",
+        "price": 24,
+        "quantity": 1
+      },
+      {
+        "name": "Pastilla Volaille",
+        "price": 18,
+        "quantity": 1
+      }
+    ],
+    "total": 64,
+    "statut": "livrée",
+    "createdAt": "2026-04-14T12:34:06.798Z"
+  },
+  {
+    "id": 1776334048208,
+    "nom": "Client",
+    "telephone": "",
+    "articles": [
+      {
+        "name": "Burger Le 78",
+        "price": 11,
+        "quantity": 1
+      },
+      {
+        "name": "Le Véritable Grec",
+        "price": 12,
+        "quantity": 1
+      },
+      {
+        "name": "Tacos Triple XL",
+        "price": 13,
+        "quantity": 1
+      }
+    ],
+    "total": 36,
+    "statut": "livrée",
+    "createdAt": "2026-04-16T10:07:28.208Z"
+  },
+  {
+    "id": 1776342493059,
+    "nom": "Client",
+    "telephone": "",
+    "articles": [
+      {
+        "name": "Grec",
+        "price": 7.5,
+        "quantity": 1
+      },
+      {
+        "name": "Merguez",
+        "price": 7.5,
+        "quantity": 1
+      },
+      {
+        "name": "Chicken Chika",
+        "price": 8,
+        "quantity": 1
+      }
+    ],
+    "total": 23,
+    "statut": "livrée",
+    "createdAt": "2026-04-16T12:28:13.059Z"
+  }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander en ligne | Les Délices du Maghreb</title>
+    <meta name="description" content="Finalisez votre commande en ligne.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/delices.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="delices.html">
+                <img src="../img/logo.png" alt="Les Délices du Maghreb" class="logo-img">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="menu.html">Menu</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="commander.html" class="btn btn-commander">Commander</a>
+    </header>
+
+    <main class="commande-page-main">
+        <div class="reservation-nav">
+            <a href="delices.html" class="btn-retour">Retour à l'accueil</a>
+        </div>
+
+        <div class="commande-layout">
+            <!-- Left Area: Ordered Items List -->
+            <div class="commande-left-section">
+                <span class="res-tag">COMMANDE</span>
+                <h1 class="res-title">Commander en ligne</h1>
+                <div id="commande-items-list" class="commande-items-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Right Area: Cart -->
+            <div class="commande-right-section">
+                <div class="panier-card">
+                    <div class="panier-header">
+                        <div class="icon-panier">
+                            <svg width="20" height="20" fill="none" stroke="var(--brand-color)" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2-2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" x2="21" y1="6" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </div>
+                        <h2>Votre panier</h2>
+                    </div>
+                    
+                    <div id="panier-list" class="panier-lines">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="panier-divider"></div>
+
+                    <div class="panier-total-row">
+                        <span class="total-label">Total</span>
+                        <span id="panier-total" class="total-amount">0€</span>
+                    </div>
+
+                    <button class="btn btn-commander btn-checkout" onclick="alert('Fonction de paiement finale a implementer avec un backend tier (ex: Stripe) !')">Valider la commande</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/cart.js"></script>
+</body>
+</html>

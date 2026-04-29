@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chez Ahmed | Fast-Food Premium</title>
+    <meta name="description" content="Le meilleur du fast-food urbain : Le Véritable Grec, Burgers Gourmet et Tacos Signatures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ahmed.css">
+</head>
+<body>
+    <header class="ahmed-header">
+        <div class="ahmed-logo">CHEZ AHMED</div>
+        <nav class="ahmed-nav">
+            <a href="#la-carte">La Carte</a>
+            <a href="contact-ahmed.html">Contact</a>
+            <a href="commander-ahmed.html" class="btn-panier">Commander</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="ahmed-hero">
+            <div class="hero-text-side">
+                <span class="hero-tag">Produit Signature</span>
+                <h1 class="hero-title">Le Roi du<br>Véritable<br>Grec.</h1>
+                <p class="hero-desc">La broche de veau traditionnelle, grillée à la perfection. Pain artisanal et légumes frais tous les jours. L'expérience authentique du vrai grec urbain.</p>
+            </div>
+            <div class="hero-img-side" style="background-image: url('../img/ahmed-hero.png');"></div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="ahmed-menu" id="la-carte">
+            <h2 class="menu-title">La Carte</h2>
+
+            <!-- Sandwiches & Grecs -->
+            <h3 class="ahmed-category-title">Sandwiches &amp; Grecs</h3>
+            <p class="ahmed-category-note">Servis seuls ou en menu (+ frites &amp; boisson)</p>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/grec.png');"></div>
+                    <h3>Grec</h3>
+                    <span class="price">7,50€ <small>/ Menu 8,50€</small></span>
+                    <p>Viande de kebab, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Grec" data-price="7.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/merguez.png');"></div>
+                    <h3>Merguez</h3>
+                    <span class="price">7,50€ <small>/ Menu 8,50€</small></span>
+                    <p>Merguez, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Merguez" data-price="7.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/chicken.png');"></div>
+                    <h3>Chicken Chika</h3>
+                    <span class="price">8,00€ <small>/ Menu 9,00€</small></span>
+                    <p>Chicken chika, cheddar, crudités et sauce au choix. (Curry, Paprika, Creamy)</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Chicken Chika" data-price="8">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/steak fromage.png');"></div>
+                    <h3>Steak Fromage</h3>
+                    <span class="price">7,50€ <small>/ Menu 8,50€</small></span>
+                    <p>Steak de boeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Steak Fromage" data-price="7.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/kefta maison.png');"></div>
+                    <h3>Kefta Maison</h3>
+                    <span class="price">9,00€ <small>/ Menu 10,00€</small></span>
+                    <p>Steak de viande mariné, herbes fraîches, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Kefta Maison" data-price="9">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/brochette.png');"></div>
+                    <h3>Brochette</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,50€</small></span>
+                    <p>Viande de boeuf mariné, herbes fraîches, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Brochette" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url(&quot;../img/foie d'agneau.png&quot;);"></div>
+                    <h3>Foie d'Agneau</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,00€</small></span>
+                    <p>Foie d'agneau mariné, herbes fraîches, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Foie d'Agneau" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/escalope.png');"></div>
+                    <h3>Escalope</h3>
+                    <span class="price">8,50€ <small>/ Menu 9,50€</small></span>
+                    <p>Filet de poulet, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Escalope" data-price="8.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/vegetarien.png');"></div>
+                    <h3>Végétarien</h3>
+                    <span class="price">6,50€ <small>/ Menu 7,50€</small></span>
+                    <p>Galette de pomme de terre, fromage, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Végétarien" data-price="6.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/cordon bleu.png');"></div>
+                    <h3>Cordon Bleu</h3>
+                    <span class="price">7,50€ <small>/ Menu 8,50€</small></span>
+                    <p>Cordon bleu, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Cordon Bleu" data-price="7.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/kefta omelette.png');"></div>
+                    <h3>Kefta Omelette</h3>
+                    <span class="price">9,50€ <small>/ Menu 10,50€</small></span>
+                    <p>Steak de boeuf, oeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Kefta Omelette" data-price="9.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/croque monsieur.png');"></div>
+                    <h3>Croque Monsieur</h3>
+                    <span class="price">5,00€ <small>/ Menu 6,00€</small></span>
+                    <p>Croque monsieur grillé, sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Croque Monsieur" data-price="5">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Tacos -->
+            <h3 class="ahmed-category-title">Tacos</h3>
+            <p class="ahmed-category-note">Viandes au choix : Kebab, Kefta, Poulet — Sauces : Mayonnaise, Barbecue...</p>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tacos.png');"></div>
+                    <h3>Tacos M</h3>
+                    <span class="price">10,00€</span>
+                    <p>1 viande et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tacos M" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tacos.png');"></div>
+                    <h3>Tacos L</h3>
+                    <span class="price">11,50€</span>
+                    <p>Viandes au choix, sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tacos L" data-price="11.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tacos.png');"></div>
+                    <h3>Tacos X</h3>
+                    <span class="price">14,00€</span>
+                    <p>3 viandes au choix, sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tacos X" data-price="14">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Burgers -->
+            <h3 class="ahmed-category-title">Burgers</h3>
+            <p class="ahmed-category-note">Servis seuls ou en menu (+ frites &amp; boisson)</p>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/cheeseburger.png');"></div>
+                    <h3>Cheeseburger</h3>
+                    <span class="price">6,50€ <small>/ Menu 7,50€</small></span>
+                    <p>Steak de boeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Cheeseburger" data-price="6.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/double cheese.png');"></div>
+                    <h3>Double Cheese</h3>
+                    <span class="price">7,00€ <small>/ Menu 8,00€</small></span>
+                    <p>2 steaks de boeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Double Cheese" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/fish.png');"></div>
+                    <h3>Fish</h3>
+                    <span class="price">6,00€ <small>/ Menu 7,00€</small></span>
+                    <p>Poisson pané, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Fish" data-price="6">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/cayan.png');"></div>
+                    <h3>Cayan</h3>
+                    <span class="price">7,00€ <small>/ Menu 8,00€</small></span>
+                    <p>Steak de boeuf, cheddar, galette de pomme de terre, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Cayan" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/chicken burger.png');"></div>
+                    <h3>Chicken Burger</h3>
+                    <span class="price">7,00€ <small>/ Menu 8,00€</small></span>
+                    <p>Poulet pané, crispy oignon, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Chicken Burger" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/extara cheese.png');"></div>
+                    <h3>Extara-Cheese</h3>
+                    <span class="price">7,00€ <small>/ Menu 8,00€</small></span>
+                    <p>2 steaks de boeuf, oeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Extara-Cheese" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/royal.png');"></div>
+                    <h3>Royal</h3>
+                    <span class="price">9,00€ <small>/ Menu 10,00€</small></span>
+                    <p>2 steaks de boeuf, crispy oignons, pain royal, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Royal" data-price="9">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/geant.png');"></div>
+                    <h3>Géant</h3>
+                    <span class="price">9,00€ <small>/ Menu 10,00€</small></span>
+                    <p>Steak de boeuf, pain géant, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Géant" data-price="9">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url(&quot;../img/l'americain.png&quot;);"></div>
+                    <h3>L'Américain</h3>
+                    <span class="price">9,00€ <small>/ Menu 10,00€</small></span>
+                    <p>Steak 150g, oeuf, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="L'Américain" data-price="9">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/xtrem burger.png');"></div>
+                    <h3>X-Trem Burger</h3>
+                    <span class="price">8,50€ <small>/ Menu 9,50€</small></span>
+                    <p>2 steaks, crispy oignons, bacon de dinde, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="X-Trem Burger" data-price="8.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/extra geant.png');"></div>
+                    <h3>Extra Géant</h3>
+                    <span class="price">11,00€ <small>/ Menu 12,00€</small></span>
+                    <p>Steak de boeuf, oeuf, cheddar, crudités et sauce au choix, pain géant.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Extra Géant" data-price="11">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/crispy cheese.png');"></div>
+                    <h3>Crispy Cheese</h3>
+                    <span class="price">9,00€ <small>/ Menu 10,00€</small></span>
+                    <p>2 steaks de boeuf, crispy oignons, pain royal, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Crispy Cheese" data-price="9">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Assiettes -->
+            <h3 class="ahmed-category-title">Assiettes</h3>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.kebab.png');"></div>
+                    <h3>Ass. Kebab</h3>
+                    <span class="price">12,50€</span>
+                    <p>Viande de boeuf, frites, crudités au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Kebab" data-price="12.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.chicken.png');"></div>
+                    <h3>Ass. Chicken</h3>
+                    <span class="price">13,50€</span>
+                    <p>Filet de poulet, cheddar, crudité au choix. (Curry, Paprika, Creamy)</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Chicken" data-price="13.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url(&quot;../img/ass.foie d'agneau.png&quot;);"></div>
+                    <h3>Ass. Foie d'Agneau</h3>
+                    <span class="price">14,50€</span>
+                    <p>Foie d'agneau, crudités au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Foie d'Agneau" data-price="14.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.brochette.png');"></div>
+                    <h3>Ass. Brochette</h3>
+                    <span class="price">14,50€</span>
+                    <p>Brochette de boeuf, frites, crudités au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Brochette" data-price="14.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.steak fromage.png');"></div>
+                    <h3>Ass. Steak Fromage</h3>
+                    <span class="price">13,50€</span>
+                    <p>Steak de boeuf, cheddar, crudité au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Steak Fromage" data-price="13.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.escalope.png');"></div>
+                    <h3>Ass. Escalope</h3>
+                    <span class="price">12,50€</span>
+                    <p>Filet de poulet, cheddar, crudité au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Escalope" data-price="12.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.kefta omelette.png');"></div>
+                    <h3>Ass. Kefta Omelettes</h3>
+                    <span class="price">15,00€</span>
+                    <p>Steak de boeuf, oeuf, frites, crudités au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Kefta Omelettes" data-price="15">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.merguez.png');"></div>
+                    <h3>Ass. Merguez</h3>
+                    <span class="price">12,50€</span>
+                    <p>Merguez, frites, crudité au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Merguez" data-price="12.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/ass.mixte.png');"></div>
+                    <h3>Ass. Mixte</h3>
+                    <span class="price">18,50€</span>
+                    <p>Viandes au choix, crudités au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Ass. Mixte" data-price="18.5">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Wings / Tenders / Nuggets -->
+            <h3 class="ahmed-category-title">Wings, Tenders &amp; Nuggets</h3>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/wingsmenu.png');"></div>
+                    <h3>Wings Menu</h3>
+                    <span class="price">9,50€</span>
+                    <p>Wings + frites + boisson.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Wings Menu" data-price="9.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tendersmenu.png');"></div>
+                    <h3>Tenders Menu</h3>
+                    <span class="price">10,00€</span>
+                    <p>Tenders + frites + boisson.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tenders Menu" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/nuggetsmenu.png');"></div>
+                    <h3>Nuggets Menu</h3>
+                    <span class="price">7,00€</span>
+                    <p>Nuggets + frites + boisson.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Nuggets Menu" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/nuggets.png');"></div>
+                    <h3>Nuggets 4 pcs</h3>
+                    <span class="price">3,50€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Nuggets 4 pcs" data-price="3.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/nuggets.png');"></div>
+                    <h3>Nuggets 8 pcs</h3>
+                    <span class="price">6,50€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Nuggets 8 pcs" data-price="6.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/wings.png');"></div>
+                    <h3>Wings 3 pcs</h3>
+                    <span class="price">3,50€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Wings 3 pcs" data-price="3.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/wings.png');"></div>
+                    <h3>Wings 7 pcs</h3>
+                    <span class="price">6,50€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Wings 7 pcs" data-price="6.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tenders.png');"></div>
+                    <h3>Tenders 3 pcs</h3>
+                    <span class="price">4,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tenders 3 pcs" data-price="4">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tenders.png');"></div>
+                    <h3>Tenders 7 pcs</h3>
+                    <span class="price">7,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Tenders 7 pcs" data-price="7">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/oignon rings.png');"></div>
+                    <h3>Oignon Rings 4 pcs</h3>
+                    <span class="price">3,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Oignon Rings 4 pcs" data-price="3">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/oignon rings.png');"></div>
+                    <h3>Oignon Rings 8 pcs</h3>
+                    <span class="price">5,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Oignon Rings 8 pcs" data-price="5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/mozza sticks.png');"></div>
+                    <h3>Mozza Sticks 4 pcs</h3>
+                    <span class="price">3,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Mozza Sticks 4 pcs" data-price="3">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/mozza sticks.png');"></div>
+                    <h3>Mozza Sticks 8 pcs</h3>
+                    <span class="price">5,00€</span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Mozza Sticks 8 pcs" data-price="5">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Panini -->
+            <h3 class="ahmed-category-title">Panini &amp; Croque</h3>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/panini.png');"></div>
+                    <h3>Panini</h3>
+                    <span class="price">6,00€ <small>/ Menu 7,00€</small></span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Panini" data-price="6">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/croque monsieur.png');"></div>
+                    <h3>Croque Monsieur</h3>
+                    <span class="price">5,00€ <small>/ Menu 6,00€</small></span>
+                    <p></p>
+                    <button class="btn-add-ahmed btn-add" data-name="Croque Monsieur" data-price="5">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Menu Enfant -->
+            <h3 class="ahmed-category-title">Menu Enfant</h3>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/menuenfant nuggets.png');"></div>
+                    <h3>Menu Enfant — 4 Nuggets</h3>
+                    <span class="price">6,00€</span>
+                    <p>4 Nuggets + frites + Capri-Sun.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Menu Enfant Nuggets" data-price="6">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/menuenfant croque monsieur.png');"></div>
+                    <h3>Menu Enfant — Croque Monsieur</h3>
+                    <span class="price">6,00€</span>
+                    <p>Croque Monsieur + frites + Capri-Sun.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Menu Enfant Croque Monsieur" data-price="6">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/menuenfant cheeseburger.png');"></div>
+                    <h3>Menu Enfant — Cheeseburger</h3>
+                    <span class="price">6,00€</span>
+                    <p>Cheeseburger + frites + Capri-Sun.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Menu Enfant Cheeseburger" data-price="6">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Naans & Galettes Spéciales -->
+            <h3 class="ahmed-category-title">Naans &amp; Galettes Spéciales</h3>
+            <p class="ahmed-category-note">Servis seuls ou en menu (+ frites &amp; boisson)</p>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/delices.png');"></div>
+                    <h3>Délices</h3>
+                    <span class="price">10,50€ <small>/ Menu 11,50€</small></span>
+                    <p>Filet de poulet, boursin, cheddar, emmental, oeufs, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Délices" data-price="10.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/tiktak.png');"></div>
+                    <h3>TikTak</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,00€</small></span>
+                    <p>Filet de poulet, boursin, bacon de dinde, cheddar.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="TikTak" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/mixte.png');"></div>
+                    <h3>Mixte</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,00€</small></span>
+                    <p>2 viandes au choix, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Galette Mixte" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/xtrem.png');"></div>
+                    <h3>X-Trem</h3>
+                    <span class="price">10,50€ <small>/ Menu 11,50€</small></span>
+                    <p>Steak de boeuf, oeufs, bacon de dinde, fromage, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Galette X-Trem" data-price="10.5">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/supreme.png');"></div>
+                    <h3>Suprême</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,00€</small></span>
+                    <p>Steak de boeuf, cordon bleu, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Suprême" data-price="10">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/oriental.png');"></div>
+                    <h3>L'Oriental</h3>
+                    <span class="price">10,00€ <small>/ Menu 11,00€</small></span>
+                    <p>Filet de poulet, olives, bacon de dinde, cheddar, crudités et sauce au choix.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="L'Oriental" data-price="10">Ajouter au panier</button>
+                </div>
+            </div>
+
+            <!-- Formules -->
+            <h3 class="ahmed-category-title">Formules</h3>
+            <div class="ahmed-grid">
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/formule1.png');"></div>
+                    <h3>Formule F1</h3>
+                    <span class="price">12,00€ <small>/ Menu 13,00€</small></span>
+                    <p>Grec + Cheeseburger.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Formule F1" data-price="12">Ajouter au panier</button>
+                </div>
+                <div class="ahmed-card menu-detail-card">
+                    <div class="card-img" style="background-image: url('../img/formule2.png');"></div>
+                    <h3>Formule F2</h3>
+                    <span class="price">12,50€ <small>/ Menu 13,50€</small></span>
+                    <p>Chicken + Cheeseburger.</p>
+                    <button class="btn-add-ahmed btn-add" data-name="Formule F2" data-price="12.5">Ajouter au panier</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="ahmed-footer">
+        <h2>Prêt à Commander ?</h2>
+        <div class="reservation-nav" style="margin-top: 2rem;">
+            <a href="../../index.html" class="btn-panier" style="background-color: white; color: black;">Retour au portail</a>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+    <script>
+        // Update cart button text specifically for this page header
+        function updateAhmedCartButton() {
+            const btn = document.querySelector('.btn-panier');
+            if (btn) {
+                const cart = JSON.parse(localStorage.getItem('restaurant_cart')) || [];
+                if (cart.length > 0) {
+                    btn.textContent = `Mon Panier (${cart.length})`;
+                } else {
+                    btn.textContent = 'Commander';
+                }
+            }
+        }
+        
+        // Listen for storage changes (cart updates)
+        window.addEventListener('storage', updateAhmedCartButton);
+        document.addEventListener('click', () => {
+            setTimeout(updateAhmedCartButton, 100);
+        });
+        updateAhmedCartButton();
+    </script>
+</body>
+</html>

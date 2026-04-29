@@ -1,0 +1,1392 @@
+/* Styling for Les Délices du Maghreb landing page */
+:root {
+    --bg-color: #F8EFE6;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --brand-color: #B2653C; /* Brown-Orange */
+    --badge-bg: #E8D5C4;
+    --badge-text: #9B5A33;
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 160px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--brand-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+}
+
+.logo-text-circle {
+    font-size: 0.45rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--brand-color);
+    line-height: 1.2;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--brand-color);
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-commander {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 0.9rem 2.2rem;
+}
+
+.btn-commander:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(178, 101, 60, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 4rem;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    animation: slideInLeft 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+.description {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-reserver {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-reserver:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(178, 101, 60, 0.3);
+}
+
+.btn-menu {
+    background-color: white;
+    color: var(--text-primary);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+}
+
+.btn-menu:hover {
+    border-color: #ddd;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Card */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeInRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s both;
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-image-card {
+    position: relative;
+    width: 450px;
+    height: 550px;
+    background-image: url('../img/plat-11.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    border: 6px solid white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.hero-image-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    z-index: 1;
+}
+
+.card-info {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    margin: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.card-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.card-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 2rem;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-reserver, .btn-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image-card {
+        width: 100%;
+        max-width: 400px;
+        height: 450px;
+    }
+}
+
+/* Menu Section Styles */
+.menu-section {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.menu-header {
+    margin-bottom: 3rem;
+}
+
+.menu-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+    text-align: right;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.placeholder-img {
+    background-color: #B2653C; /* Match brand color */
+}
+
+.menu-card-content {
+    padding: 1.5rem;
+}
+
+.menu-card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.2px;
+}
+
+.menu-card-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Update Responsive for Menu Section */
+@media (max-width: 1024px) {
+    .menu-title-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 0 2rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About / History Section */
+.about-section {
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1.6fr;
+    gap: 3rem;
+}
+
+.about-card-main {
+    background-color: var(--brand-color);
+    color: white;
+    border-radius: 24px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.about-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.about-content-top h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.about-content-bottom p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.value-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.value-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+/* Responsive updates for About section */
+@media (max-width: 1024px) {
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 0 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-card-main {
+        padding: 2rem;
+        min-height: auto;
+        gap: 2rem;
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    max-width: 1400px;
+    margin: 5rem auto;
+    padding: 0 4rem;
+}
+
+.gallery-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.gallery-title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background-color: var(--brand-color);
+    height: 350px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-section {
+        padding: 0 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 300px;
+    }
+}
+
+/* Footer CTA */
+.footer-cta {
+    background-color: var(--brand-color);
+    padding: 6rem 4rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    flex: 1;
+}
+
+.footer-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-text h2 {
+    color: white;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.footer-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.btn-call {
+    background-color: white;
+    color: var(--brand-color);
+    padding: 1.1rem 3.5rem;
+    font-size: 1.15rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-call:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #fafafa;
+}
+
+.btn-insta {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 1.1rem 3.5rem;
+    font-size: 1.15rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-insta:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-cta {
+        padding: 4rem 2rem;
+    }
+    
+    .footer-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .footer-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-call, .btn-insta {
+        width: 100%;
+    }
+}
+
+/* Reservation Page Styling */
+.reservation-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.reservation-nav {
+    margin-bottom: 2rem;
+}
+
+.btn-retour {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    transition: transform 0.3s ease;
+}
+
+.btn-retour:hover {
+    transform: translateX(-5px);
+}
+
+.reservation-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+}
+
+/* Left Form Box */
+.reservation-form-card {
+    background-color: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.res-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--brand-color);
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.res-tag svg {
+    color: var(--brand-color);
+}
+
+.res-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.res-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.res-form input, .res-form textarea {
+    flex: 1;
+    background-color: #F8F5F2; /* Light form field */
+    border: 1px solid transparent;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    outline: none;
+    color: var(--text-primary);
+}
+
+.res-form input:focus, .res-form textarea:focus {
+    border-color: var(--brand-color);
+}
+
+.full-width {
+    width: 100%;
+}
+
+.submit-res {
+    align-self: flex-start;
+    border: none;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+/* Right Info Boxes */
+.reservation-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-card {
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dark-card {
+    background-color: #1F1F1F;
+    color: white;
+}
+
+.dark-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.dark-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dark-card li {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-card li::before {
+    content: "•";
+    color: var(--brand-color);
+    font-size: 1.5rem;
+}
+
+.light-card {
+    background-color: white;
+}
+
+.light-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive updates for Reservation */
+@media (max-width: 1024px) {
+    .reservation-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation-main {
+        padding: 0 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .reservation-form-card {
+        padding: 2rem;
+    }
+    
+    .submit-res {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .info-card {
+        padding: 2rem;
+    }
+}
+
+/* Menu Full Page Styling */
+.menu-page-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.menu-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.menu-page-title-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-page-subtitle {
+    max-width: 450px;
+    text-align: right;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.menu-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.menu-detail-card .card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.menu-detail-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.menu-detail-card .price {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--brand-color);
+}
+
+.menu-detail-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-add {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid #CCC;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-add:hover {
+    background-color: var(--brand-color);
+    color: white;
+    border-color: var(--brand-color);
+}
+
+@media (max-width: 1024px) {
+    .menu-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .menu-page-subtitle {
+        text-align: left;
+    }
+    .menu-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-page-main {
+        padding: 0 2rem;
+    }
+    .menu-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Page Styling */
+.contact-page-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.contact-card-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.main-contact-card {
+    background-color: var(--brand-color);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 900px;
+    padding: 4rem 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-icon-wrapper {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-tag {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.contact-inner-card {
+    background-color: var(--badge-bg);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.inner-tag {
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.phone-number {
+    color: var(--text-primary);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.btn-call-action {
+    background-color: white;
+    color: var(--text-primary);
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.btn-call-action:hover {
+    transform: translateY(-3px);
+}
+
+.contact-footer-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.info-footer-item.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+
+
+.info-footer-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.hours-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .contact-footer-info {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page-main {
+        padding: 0 1.5rem;
+    }
+    
+    .main-contact-card {
+        padding: 3rem 1.5rem 0;
+    }
+    
+    .phone-number {
+        font-size: 2rem;
+    }
+}
+
+/* Commander Page Styling */
+.commande-page-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.commande-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.commande-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.commande-item-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.commande-item-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.commande-item-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.commande-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.qty-btn {
+    background-color: transparent;
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+    background-color: var(--brand-color);
+    color: white;
+    border-color: var(--brand-color);
+}
+
+.qty-val {
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.commande-item-price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--brand-color);
+}
+
+.empty-cart-msg {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-style: italic;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Right Cart Section */
+.panier-card {
+    background-color: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 2rem;
+}
+
+.panier-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.icon-panier {
+    background-color: var(--badge-bg);
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panier-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.panier-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 100px;
+}
+
+.panier-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.panier-item-name {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.panier-item-price {
+    font-weight: 700;
+}
+
+.panier-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 2.5rem 0 1.5rem;
+}
+
+.panier-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.total-label {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.total-amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.btn-checkout {
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1.15rem;
+}
+
+@media (max-width: 1024px) {
+    .commande-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .panier-card {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .commande-page-main {
+        padding: 0 1.5rem;
+    }
+    .commande-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .commande-item-price {
+        align-self: flex-end;
+    }
+    .panier-card {
+        padding: 2rem;
+    }
+}
+
+/* Full Galerie Page */
+.galerie-page-main {
+    max-width: 1400px;
+    margin: 2rem auto 5rem;
+    padding: 0 4rem;
+}
+
+.gallery-full-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.gallery-full-grid .gallery-item {
+    border-radius: 16px;
+}
+
+@media (max-width: 1024px) {
+    .gallery-full-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .galerie-page-main {
+        padding: 0 1.5rem;
+    }
+    
+    .gallery-full-grid {
+        grid-template-columns: 1fr;
+    }
+}

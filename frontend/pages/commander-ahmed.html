@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier | Chez Ahmed</title>
+    <meta name="description" content="Finalisez votre commande chez Ahmed.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/ahmed.css">
+</head>
+<body>
+    <header class="ahmed-header">
+        <div class="ahmed-logo"><a href="ahmed.html" style="color: inherit; text-decoration: none;">CHEZ AHMED</a></div>
+        <nav class="ahmed-nav">
+            <a href="ahmed.html#la-carte">La Carte</a>
+            <a href="contact-ahmed.html">Contact</a>
+            <a href="commander-ahmed.html" class="btn-panier">Commander</a>
+        </nav>
+    </header>
+
+    <main class="commande-page-main">
+        <div class="reservation-nav" style="margin-top: 2rem; margin-bottom: 2rem;">
+            <a href="ahmed.html" class="btn-panier" style="background-color: transparent; color: var(--ahmed-text); border: 2px solid var(--ahmed-text); display: inline-block;">Retour au menu</a>
+        </div>
+
+        <div class="commande-layout">
+            <!-- Left Area: Ordered Items List -->
+            <div class="commande-left-section">
+                <span class="hero-tag" style="margin-bottom: 0.5rem;">VOTRE COMMANDE</span>
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 2rem;">VOTRE PANIER</h1>
+                <div id="commande-items-list" class="commande-items-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Right Area: Cart -->
+            <div class="commande-right-section">
+                <div class="panier-card" style="border: 2px solid #EEE; border-radius: 0; box-shadow: none;">
+                    <div class="panier-header">
+                        <div class="icon-panier" style="background-color: var(--ahmed-text); color: white; border-radius: 0;">
+                            <svg width="20" height="20" opacity="1" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2-2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" x2="21" y1="6" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </div>
+                        <h2 style="font-size: 1.8rem; font-weight: 800; text-transform: uppercase;">Récapitulatif</h2>
+                    </div>
+                    
+                    <div id="panier-list" class="panier-lines">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="panier-divider" style="height: 2px; background-color: #EEE; margin: 2rem 0;"></div>
+
+                    <div class="panier-total-row">
+                        <span class="total-label" style="font-size: 1.5rem; text-transform: uppercase;">Total</span>
+                        <span id="panier-total" class="total-amount" style="font-size: 2rem;">0€</span>
+                    </div>
+
+                    <button class="btn-panier btn-checkout" style="width: 100%; border: none; cursor: pointer; border-radius: 0;">Valider la commande</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ahmed-footer" style="margin-top: 4rem;">
+        <h2>Prêt à Croquer ?</h2>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+    <script>
+        // Override updateCartButton for Ahmed specifically if needed.
+        // cart.js relies on document.querySelector('header .btn-commander') which isn't here,
+        // so we can redefine updateCartButton or mock the button.
+        function updateAhmedCartButton() {
+            const btn = document.querySelector('.btn-panier[href="commander-ahmed.html"]');
+            if (btn) {
+                const globalCart = JSON.parse(localStorage.getItem('restaurant_cart')) || [];
+                if (globalCart.length > 0) {
+                    btn.textContent = `Mon Panier (${globalCart.length})`;
+                } else {
+                    btn.textContent = 'Commander';
+                }
+            }
+        }
+        
+        window.addEventListener('storage', updateAhmedCartButton);
+        document.addEventListener('click', () => { setTimeout(updateAhmedCartButton, 100); });
+        updateAhmedCartButton();
+        
+        // Wait until document is fully loaded to run cart rendering logic
+        document.addEventListener('DOMContentLoaded', () => {
+            // Also override success colors to match ahmed style
+            const originalFetch = window.fetch;
+        });
+    </script>
+</body>
+</html>
