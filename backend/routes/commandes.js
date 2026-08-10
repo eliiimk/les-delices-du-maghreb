@@ -81,7 +81,7 @@ router.post('/', async (req, res) => {
             saveLocalCommandes(list);
         }
 
-        console.log(`🛒 Nouvelle commande — ${articles.length} article(s) — Total : ${total}€`);
+        console.log(`Nouvelle commande — ${articles.length} article(s) — Total : ${total}€`);
 
         // Envoi email de confirmation (en arrière-plan, sans bloquer la réponse)
         sendCommandeEmail(nouvelle).catch(err => console.error('Email error:', err));

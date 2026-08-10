@@ -238,7 +238,7 @@ function renderReservations(filter) {
             </div>
             <div class="card-body">
                 <div style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--primary); font-weight: bold;">
-                    📅 ${res.date} à ${res.heure} — 👥 ${res.personnes} pers.
+                    ${res.date} à ${res.heure} — ${res.personnes} pers.
                 </div>
                 <div style="margin-bottom: 0.5rem;">
                     <strong>Tél :</strong> ${res.telephone}

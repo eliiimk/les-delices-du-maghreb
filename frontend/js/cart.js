@@ -84,7 +84,6 @@ function renderCommanderPage() {
     if (cart.length === 0) {
         itemsContainer.innerHTML = `
             <div class="empty-cart-msg" style="text-align:center;">
-                <div style="font-size:2.5rem;margin-bottom:1rem;">🛒</div>
                 <p style="font-size:1.1rem;font-weight:800;text-transform:uppercase;">Votre panier est vide</p>
                 <p style="font-size:0.9rem;color:#666;margin-top:0.5rem;font-weight:400;text-transform:none;">Ajoutez des plats depuis la carte pour commencer.</p>
                 <a href="ahmed.html" class="empty-cart-cta">← Voir la carte</a>
@@ -261,7 +260,7 @@ function showTacosCustomModal(name, price, nbViandes) {
             <div style="text-align:center;margin-bottom:1.2rem;">
                 <span style="font-size:.8rem;color:#E3000F;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Personnalise ton tacos</span>
                 <h3 style="font-size:1.5rem;font-weight:800;margin:.4rem 0 0;color:#111;">${name}</h3>
-                <p style="font-size:.85rem;color:#777;margin:.3rem 0 0;">🥩 ${viandeSummary}</p>
+                <p style="font-size:.85rem;color:#777;margin:.3rem 0 0;">${viandeSummary}</p>
             </div>
             <div style="text-align:center;margin-bottom:1.2rem;">
                 <span class="tacos-progress-step"></span>
@@ -274,7 +273,7 @@ function showTacosCustomModal(name, price, nbViandes) {
             <div style="display:flex;gap:.8rem;">
                 <button id="btn-tacos-back" style="flex:1;padding:.8rem;border:1.5px solid #ddd;background:none;border-radius:10px;cursor:pointer;font-weight:600;color:#555;font-family:'Outfit',sans-serif;">← Retour</button>
                 <button id="btn-tacos-confirm" style="flex:2;padding:.8rem;border:none;background:#E3000F;color:#fff;border-radius:10px;cursor:pointer;font-weight:700;font-family:'Outfit',sans-serif;font-size:1rem;opacity:.5;pointer-events:none;">
-                    ✅ Ajouter au panier
+                    Ajouter au panier
                 </button>
             </div>
         `;
@@ -411,7 +410,7 @@ function showSauceModal(name, priceSeul, priceMenu, sauceList) {
             <div style="display:flex;gap:.8rem;">
                 <button id="btn-sauce-cancel" style="flex:1;padding:.8rem;border:1.5px solid #ddd;background:none;border-radius:10px;cursor:pointer;font-weight:600;color:#999;font-family:'Outfit',sans-serif;">Annuler</button>
                 <button id="btn-sauce-confirm" style="flex:2;padding:.8rem;border:none;background:#000;color:#fff;border-radius:10px;cursor:pointer;font-weight:700;font-family:'Outfit',sans-serif;font-size:1rem;opacity:${getConfirmEnabled() ? '1' : '.4'};pointer-events:${getConfirmEnabled() ? 'auto' : 'none'};">
-                    ✅ Ajouter au panier
+                    Ajouter au panier
                 </button>
             </div>
         `;
@@ -644,10 +643,9 @@ async function submitCommande() {
                 width: 90%; max-width: 450px;
             `;
             successMsg.innerHTML = `
-                <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
                 <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">Commande envoyée !</h2>
                 <div style="background: #F3F4F6; padding: 1rem; border-radius: 12px; margin: 1rem 0;">
-                    <p style="color: #333; font-weight: 600; margin: 0;">💳 Paiement à la réception</p>
+                    <p style="color: #333; font-weight: 600; margin: 0;">Paiement à la réception</p>
                     <p style="color: #666; font-size: 0.9rem; margin-top: 0.3rem;">Espèces, Carte Bancaire ou Ticket Resto</p>
                 </div>
                 <p style="color: #666;">${data.message}</p>

@@ -17,9 +17,9 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/restau
 
 if (MONGODB_URI) {
     mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
-        .then(() => console.log('✅ MongoDB connecté avec succès !'))
+        .then(() => console.log('MongoDB connecté avec succès !'))
         .catch(err => {
-            console.warn('⚠️ MongoDB non disponible (', err.message, '). Le serveur utilisera le fallback JSON local.');
+            console.warn('MongoDB non disponible (', err.message, '). Le serveur utilisera le fallback JSON local.');
         });
 }
 
@@ -61,17 +61,17 @@ app.post('/api/admin/login', (req, res) => {
 app.get('/api/status', (req, res) => {
     res.json({ 
         status: 'ok', 
-        message: 'Serveur Les Délices du Maghreb actif ✅',
+        message: 'Serveur Les Délices du Maghreb actif',
         db: mongoose.connection.readyState === 1 ? 'MongoDB connecté' : 'Fallback JSON local'
     });
 });
 
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`\n🍽️  Serveur démarré sur http://localhost:${PORT}`);
-        console.log(`📋  API Réservations : http://localhost:${PORT}/api/reservations`);
-        console.log(`🛒  API Commandes    : http://localhost:${PORT}/api/commandes`);
-        console.log(`💚  Statut           : http://localhost:${PORT}/api/status\n`);
+        console.log(`\nServeur démarré sur http://localhost:${PORT}`);
+        console.log(`API Réservations : http://localhost:${PORT}/api/reservations`);
+        console.log(`API Commandes    : http://localhost:${PORT}/api/commandes`);
+        console.log(`Statut           : http://localhost:${PORT}/api/status\n`);
     });
 }
 

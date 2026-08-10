@@ -6,7 +6,7 @@ let transporter = null;
 function getTransporter() {
     if (transporter) return transporter;
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-        console.warn('⚠️  Notifications email désactivées (EMAIL_USER ou EMAIL_PASS manquants dans .env)');
+        console.warn('Notifications email désactivées (EMAIL_USER ou EMAIL_PASS manquants dans .env)');
         return null;
     }
     transporter = nodemailer.createTransport({
@@ -112,7 +112,7 @@ function buildAdminEmailHTML(commande) {
     <body style="margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
         <div style="max-width:560px;margin:30px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
             <div style="background:#E3000F;padding:24px 32px;">
-                <h1 style="margin:0;color:#fff;font-size:20px;">🛒 Nouvelle commande reçue !</h1>
+                <h1 style="margin:0;color:#fff;font-size:20px;">Nouvelle commande reçue !</h1>
             </div>
             <div style="padding:28px 32px;">
                 <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
@@ -209,21 +209,21 @@ async function sendCommandeEmail(commande) {
                 subject: `Votre commande est confirmée — ${cfg.displayTitle}`,
                 html: buildClientEmailHTML(commande)
             });
-            console.log(`📧 Email confirmation envoyé à ${commande.email}`);
+            console.log(`Email confirmation envoyé à ${commande.email}`);
         }
 
         // Email admin
         if (adminEmail) {
             await t.sendMail({
-                from: `"Bot Commandes 🛒" <${process.env.EMAIL_USER}>`,
+                from: `"Bot Commandes" <${process.env.EMAIL_USER}>`,
                 to: adminEmail,
-                subject: `🛒 Nouvelle commande — ${commande.nom} — ${commande.total.toFixed(2)}€`,
+                subject: `Nouvelle commande — ${commande.nom} — ${commande.total.toFixed(2)}€`,
                 html: buildAdminEmailHTML(commande)
             });
-            console.log(`📧 Notification admin envoyée à ${adminEmail}`);
+            console.log(`Notification admin envoyée à ${adminEmail}`);
         }
     } catch (err) {
-        console.error('❌ Erreur envoi email:', err.message);
+        console.error('Erreur envoi email:', err.message);
     }
 }
 
@@ -264,9 +264,9 @@ async function sendStatusEmail(commande, newStatut) {
             subject: `${info.titre} — ${cfg.displayTitle}`,
             html: buildStatusEmailHTML(commande, info, info.message)
         });
-        console.log(`📧 Email statut (${newStatut}) envoyé à ${commande.email}`);
+        console.log(`Email statut (${newStatut}) envoyé à ${commande.email}`);
     } catch (err) {
-        console.error('❌ Erreur envoi email statut:', err.message);
+        console.error('Erreur envoi email statut:', err.message);
     }
 }
 
