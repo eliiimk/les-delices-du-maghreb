@@ -9,6 +9,9 @@ const ArticleSchema = new mongoose.Schema({
 const CommandeSchema = new mongoose.Schema({
     nom:       { type: String, default: 'Client' },
     telephone: { type: String, default: '' },
+    email:     { type: String, default: '' },
+    // origine / restaurant (optionnel) — ex: 'chez_ahmed' or 'les_delices'
+    restaurant: { type: String, default: 'chez_ahmed' },
     articles:  { type: [ArticleSchema], required: true },
     total:     { type: Number, required: true },
     statut: {

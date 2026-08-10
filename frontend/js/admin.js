@@ -1,6 +1,6 @@
 // admin.js
 
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = '/api';
 let currentTab = 'commandes';
 let dataCommandes = [];
 let dataReservations = [];
@@ -20,13 +20,25 @@ const containerCommandes = document.getElementById('commandes-container');
 const containerReservations = document.getElementById('reservations-container');
 
 // Login Logic
-btnLogin.addEventListener('click', () => {
-    if (pwdInput.value === 'admin123') {
-        loginOverlay.style.display = 'none';
-        dashboardApp.style.display = 'flex';
-        initDashboard();
-    } else {
-        loginError.textContent = 'Mot de passe incorrect.';
+btnLogin.addEventListener('click', async () => {
+    const password = pwdInput.value;
+    try {
+        const response = await fetch(`${API_BASE}/admin/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password })
+        });
+        const result = await response.json();
+        
+        if (result.success) {
+            loginOverlay.style.display = 'none';
+            dashboardApp.style.display = 'flex';
+            initDashboard();
+        } else {
+            loginError.textContent = 'Mot de passe incorrect.';
+        }
+    } catch (err) {
+        loginError.textContent = 'Erreur de connexion au serveur.';
     }
 });
 pwdInput.addEventListener('keypress', (e) => {
@@ -146,6 +158,23 @@ function renderCommandes(filter) {
             actionsHTML = `<button class="action-btn btn-secondary" onclick="updateStatus('commandes', '${cmd._id}', 'livrée')">Terminer (Livrée)</button>`;
         }
 
+        // Bouton WhatsApp si téléphone disponible
+        let whatsappBtn = '';
+        if (cmd.telephone) {
+            const tel = cmd.telephone.replace(/[^0-9+]/g, '');
+            const telWa = tel.startsWith('0') ? '33' + tel.slice(1) : tel.replace('+', '');
+            const articlesList = cmd.articles.map(a => `${a.quantity}x ${a.name}`).join('\n');
+            // Déterminer le nom du restaurant selon la commande
+            let restaurantName = 'Chez Ahmed';
+            if (cmd.restaurant && (cmd.restaurant === 'les_delices' || cmd.restaurant === 'les_delices_du')) {
+                restaurantName = 'Les Délices du Maghreb';
+            }
+            const msg = encodeURIComponent(
+                `Bonjour ${cmd.nom} ! Votre commande ${restaurantName} est confirmée :\n${articlesList}\nTotal : ${cmd.total.toFixed(2).replace('.', ',')}€\nPaiement à la réception.\nÀ tout de suite !`
+            );
+            whatsappBtn = `<a href="https://wa.me/${telWa}?text=${msg}" target="_blank" class="action-btn" style="background:#25D366;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">WhatsApp</a>`;
+        }
+
         card.innerHTML = `
             <div class="card-header">
                 <div>
@@ -157,7 +186,8 @@ function renderCommandes(filter) {
             <div class="card-body">
                 <div style="margin-bottom: 1rem;">
                     <strong>Client :</strong> ${cmd.nom}<br>
-                    <strong>Tél :</strong> ${cmd.telephone || 'Non renseigné'}
+                    <strong>Tél :</strong> ${cmd.telephone || '<span style="color:#E3000F">Non renseigné</span>'}<br>
+                    <strong>Email :</strong> ${cmd.email || '<span style="color:#aaa">-</span>'}
                 </div>
                 <div style="background: #F9FAFB; padding: 1rem; border-radius: 8px;">
                     ${articlesHTML}
@@ -166,6 +196,7 @@ function renderCommandes(filter) {
             </div>
             <div class="card-actions">
                 ${actionsHTML}
+                ${whatsappBtn}
             </div>
         `;
         containerCommandes.appendChild(card);
