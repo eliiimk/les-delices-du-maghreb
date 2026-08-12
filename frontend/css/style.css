@@ -194,3 +194,17 @@ body, html {
        flex: none;
     }
 }
+
+/* Accessibilité — masque visuellement un élément tout en le gardant
+   accessible aux lecteurs d'écran (utilisé pour les <label> de formulaire) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

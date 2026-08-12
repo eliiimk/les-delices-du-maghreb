@@ -41,17 +41,23 @@
                 
                 <form class="res-form" id="form-reservation">
                     <div class="form-row">
+                        <label for="res-nom" class="sr-only">Nom</label>
                         <input type="text" id="res-nom" placeholder="Nom" required>
+                        <label for="res-telephone" class="sr-only">Téléphone</label>
                         <input type="tel" id="res-telephone" placeholder="Téléphone" required>
                     </div>
                     <div class="form-row">
+                        <label for="res-date" class="sr-only">Date</label>
                         <input type="text" id="res-date" placeholder="Date" onfocus="(this.type='date')" required>
+                        <label for="res-heure" class="sr-only">Heure</label>
                         <input type="text" id="res-heure" placeholder="Heure" onfocus="(this.type='time')" required>
                     </div>
                     <div class="form-row">
+                        <label for="res-personnes" class="sr-only">Nombre de personnes</label>
                         <input type="number" id="res-personnes" placeholder="Nombre de Personnes" min="1" required class="full-width">
                     </div>
                     <div class="form-row">
+                        <label for="res-message" class="sr-only">Message ou demande spéciale</label>
                         <textarea id="res-message" placeholder="Message ou demande spéciale" rows="3" class="full-width"></textarea>
                     </div>
                     <div id="res-feedback" style="display:none; padding: 1rem 1.5rem; border-radius: 12px; font-weight: 600; margin-bottom: 1rem;"></div>
@@ -63,7 +69,7 @@
             <div class="reservation-info">
                 <!-- Info block: Pourquoi réserver -->
                 <div class="info-card dark-card">
-                    <h3>Pourquoi réserver ?</h3>
+                    <h2>Pourquoi réserver ?</h2>
                     <ul>
                         <li>Places garanties aux heures de pointe</li>
                         <li>Service rapide pour familles et groupes</li>
@@ -73,7 +79,7 @@
 
                 <!-- Info block: Infos pratiques -->
                 <div class="info-card light-card">
-                    <h3>Infos pratiques</h3>
+                    <h2>Infos pratiques</h2>
                     <div class="info-item">
                         <svg width="24" height="24" fill="none" stroke="var(--brand-color)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         <p>Mardi a Jeudi : 11h00 – 15h00 / 18h00-23h00<br>Vendredi a Dimanche : 11h00 – 23h00</p>
