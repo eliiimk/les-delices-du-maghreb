@@ -161,7 +161,7 @@ function renderCommanderPage() {
     if (cart.isEmpty()) {
         itemsContainer.innerHTML = `
             <div class="empty-cart-msg" style="text-align:center;">
-                <p style="font-size:1.1rem;font-weight:800;text-transform:uppercase;">Votre panier est vide</p>
+                <h2 style="font-size:1.1rem;font-weight:800;text-transform:uppercase;">Votre panier est vide</h2>
                 <p style="font-size:0.9rem;color:#666;margin-top:0.5rem;font-weight:400;text-transform:none;">Ajoutez des plats depuis la carte pour commencer.</p>
                 <a href="ahmed.html" class="empty-cart-cta">← Voir la carte</a>
             </div>`;
