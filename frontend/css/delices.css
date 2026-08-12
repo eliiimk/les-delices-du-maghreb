@@ -3,7 +3,7 @@
     --bg-color: #F8EFE6;
     --text-primary: #1A1A1A;
     --text-secondary: #4A4A4A;
-    --brand-color: #B2653C; /* Brown-Orange */
+    --brand-color: #A05230; /* Brown-Orange, assombri depuis #B2653C : le texte blanc sur ce fond (boutons Commander, panier flottant...) ne faisait que 4.36:1, insuffisant pour du texte non-large (WCAG 1.4.3). Cette nuance assure 5.61:1. */
     --badge-bg: #E8D5C4;
     --badge-text: #7A4626; /* assombri pour un contraste AA (5.4:1) sur --badge-bg, l'original (#9B5A33) ne faisait que 3.78:1 */
     --font-main: 'Outfit', sans-serif;
@@ -835,7 +835,12 @@ body {
 
 .dark-card li::before {
     content: "•";
-    color: var(--brand-color);
+    /* Valeur d'origine (#B2653C) conservée explicitement plutôt que la
+       variable --brand-color : sur ce fond sombre (#1F1F1F), la teinte plus
+       claire donne 3.78:1 (conforme, seuil 3:1 pour ce texte large) alors
+       que la nouvelle valeur assombrie de --brand-color ne ferait que
+       2.94:1 (non conforme). */
+    color: #B2653C;
     font-size: 1.5rem;
 }
 
