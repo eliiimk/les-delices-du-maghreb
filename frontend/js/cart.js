@@ -1,11 +1,96 @@
 // cart.js
 
-let cart = JSON.parse(localStorage.getItem('restaurant_cart')) || [];
+/**
+ * Classe Cart — encapsule l'état et les opérations du panier
+ * (persistance localStorage, ajout/retrait d'articles, calcul du total).
+ * Remplace l'ancienne approche procédurale (tableau global + fonctions isolées)
+ * par une approche orientée objet : une seule instance possède son état
+ * et expose une API cohérente pour le manipuler.
+ */
+class Cart {
+    /**
+     * @param {string} storageKey - Clé localStorage utilisée pour la persistance
+     */
+    constructor(storageKey) {
+        this.storageKey = storageKey;
+        this.items = this._load();
+    }
 
-function saveCart() {
-    localStorage.setItem('restaurant_cart', JSON.stringify(cart));
-    updateCartButton();
-    updateFloatingCart();
+    /** Charge le panier depuis localStorage (tableau vide si absent/invalide) */
+    _load() {
+        try {
+            return JSON.parse(localStorage.getItem(this.storageKey)) || [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    /** Persiste l'état courant et rafraîchit l'UI liée au panier */
+    save() {
+        localStorage.setItem(this.storageKey, JSON.stringify(this.items));
+        updateCartButton();
+        updateFloatingCart();
+    }
+
+    /**
+     * Ajoute un article, ou incrémente sa quantité s'il existe déjà (comparaison par nom)
+     * @param {string} name
+     * @param {number|string} price
+     */
+    add(name, price) {
+        const existingItem = this.items.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            const priceFloat = typeof price === 'string' ? parseFloat(price.toString().replace(',', '.')) : parseFloat(price);
+            this.items.push({ name, price: priceFloat, quantity: 1 });
+        }
+        this.save();
+    }
+
+    /**
+     * Modifie la quantité d'un article à l'index donné ; le retire si la quantité atteint zéro
+     * @param {number} index
+     * @param {number} delta
+     */
+    changeQuantity(index, delta) {
+        if (!this.items[index]) return;
+        this.items[index].quantity += delta;
+        if (this.items[index].quantity <= 0) {
+            this.items.splice(index, 1);
+        }
+        this.save();
+    }
+
+    /** Vide entièrement le panier (après confirmation de commande) */
+    clear() {
+        this.items = [];
+        this.save();
+    }
+
+    /** @returns {number} Nombre total d'articles (somme des quantités) */
+    getItemCount() {
+        return this.items.reduce((sum, item) => sum + item.quantity, 0);
+    }
+
+    /** @returns {number} Montant total du panier */
+    getTotal() {
+        return this.items.reduce((sum, item) => sum + (item.quantity * item.price), 0);
+    }
+
+    /** @returns {boolean} */
+    isEmpty() {
+        return this.items.length === 0;
+    }
+}
+
+// Instance unique du panier pour la session, partagée par toutes les pages
+const cart = new Cart('restaurant_cart');
+
+// Export pour les tests (Jest/Node) — n'a aucun effet dans le navigateur,
+// où `module` n'existe pas.
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { Cart };
 }
 
 // --- Panier flottant ---
@@ -13,7 +98,7 @@ function updateFloatingCart() {
     const btn = document.getElementById('floating-cart-btn');
     const badge = document.getElementById('floating-cart-badge');
     if (!btn || !badge) return;
-    const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const total = cart.getItemCount();
     if (total > 0) {
         badge.textContent = total;
         btn.classList.add('visible');
@@ -29,7 +114,7 @@ function updateFloatingCart() {
 function updateCartButton() {
     const btn = document.querySelector('header .btn-commander');
     if (btn) {
-        if (cart.length > 0) {
+        if (cart.items.length > 0) {
             btn.textContent = 'Votre panier';
         } else {
             btn.textContent = 'Commander';
@@ -38,16 +123,8 @@ function updateCartButton() {
 }
 
 function addToCart(name, price) {
-    const existingItem = cart.find(item => item.name === name);
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        // Handle French commas in old text scraping and float prices
-        const priceFloat = typeof price === 'string' ? parseFloat(price.toString().replace(',', '.')) : parseFloat(price);
-        cart.push({ name, price: priceFloat, quantity: 1 });
-    }
-    saveCart();
-    
+    cart.add(name, price);
+
     // Create a temporary toast feedback
     const toast = document.createElement('div');
     toast.textContent = `${name} ajouté à la commande !`;
@@ -81,7 +158,7 @@ function renderCommanderPage() {
     cartContainer.innerHTML = '';
     let total = 0;
 
-    if (cart.length === 0) {
+    if (cart.isEmpty()) {
         itemsContainer.innerHTML = `
             <div class="empty-cart-msg" style="text-align:center;">
                 <p style="font-size:1.1rem;font-weight:800;text-transform:uppercase;">Votre panier est vide</p>
@@ -97,7 +174,7 @@ function renderCommanderPage() {
     const infoCard = document.getElementById('customer-info-fields');
     if (infoCard) infoCard.style.display = 'block';
 
-    cart.forEach((item, index) => {
+    cart.items.forEach((item, index) => {
         // Left side item card
         const itemCard = document.createElement('div');
         itemCard.className = 'commande-item-card';
@@ -132,14 +209,8 @@ function renderCommanderPage() {
 
 // Global function to change quantity from within HTML onclick
 window.changeQuantity = function(index, delta) {
-    if (cart[index]) {
-        cart[index].quantity += delta;
-        if (cart[index].quantity <= 0) {
-            cart.splice(index, 1); // remove item
-        }
-        saveCart();
-        renderCommanderPage();
-    }
+    cart.changeQuantity(index, delta);
+    renderCommanderPage();
 }
 
 /**
@@ -573,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function submitCommande() {
-    if (cart.length === 0) {
+    if (cart.isEmpty()) {
         alert('Votre panier est vide !');
         return;
     }
@@ -619,7 +690,7 @@ async function submitCommande() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ 
-                articles: cart,
+                articles: cart.items,
                 nom,
                 email,
                 telephone,
@@ -630,8 +701,7 @@ async function submitCommande() {
 
         if (data.success) {
             // Clear cart
-            cart = [];
-            saveCart();
+            cart.clear();
             renderCommanderPage();
 
             // Show success message

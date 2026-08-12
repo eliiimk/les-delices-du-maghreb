@@ -5,6 +5,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
+const mongoSanitize = require('express-mongo-sanitize');
 
 const reservationsRouter = require('./routes/reservations');
 const commandesRouter = require('./routes/commandes');
@@ -15,7 +16,9 @@ const PORT = process.env.PORT || 3000;
 // MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/restaurant-delices';
 
-if (MONGODB_URI) {
+// En environnement de test, on ne tente pas de connexion réelle : les routes
+// basculent automatiquement sur leur fallback JSON local (readyState reste à 0).
+if (MONGODB_URI && process.env.NODE_ENV !== 'test') {
     mongoose.connect(MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
         .then(() => console.log('MongoDB connecté avec succès !'))
         .catch(err => {
@@ -28,8 +31,40 @@ if (MONGODB_URI) {
 app.use(helmet({
     contentSecurityPolicy: false, // Désactivé pour simplifier le chargement des scripts externes si besoin
 }));
-app.use(cors());
+
+// CORS restrictif — liste blanche d'origines autorisées
+// En développement : localhost. En production : uniquement le(s) domaine(s) Vercel déclaré(s).
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000')
+    .split(',')
+    .map(origin => origin.trim());
+
+const corsOptions = {
+    origin: function (origin, callback) {
+        // Autorise les requêtes sans origine (ex: Postman, apps mobiles) et les origines listées
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Origine non autorisée par la politique CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PATCH'],
+    allowedHeaders: ['Content-Type'],
+};
+app.use(cors(corsOptions));
+
+// Gestion propre des erreurs CORS : renvoyer 403 plutôt qu'une erreur 500 générique
+app.use((err, req, res, next) => {
+    if (err && err.message === 'Origine non autorisée par la politique CORS') {
+        return res.status(403).json({ success: false, message: 'Origine non autorisée.' });
+    }
+    next(err);
+});
+
 app.use(express.json());
+
+// Assainissement des données entrantes contre les injections NoSQL
+// (supprime les clés commençant par '$' ou contenant '.', utilisées pour manipuler les requêtes MongoDB)
+app.use(mongoSanitize());
 
 // Protection contre les abus (Rate Limiting)
 const limiter = rateLimit({
@@ -49,8 +84,12 @@ app.use('/api/commandes', commandesRouter);
 
 // Route de connexion Admin sécurisée
 app.post('/api/admin/login', (req, res) => {
+    if (!process.env.ADMIN_PASSWORD) {
+        console.error('ADMIN_PASSWORD non configuré côté serveur — connexion admin refusée par sécurité.');
+        return res.status(500).json({ success: false, message: 'Configuration serveur incomplète.' });
+    }
     const { password } = req.body;
-    if (password === (process.env.ADMIN_PASSWORD || 'admin123')) {
+    if (password === process.env.ADMIN_PASSWORD) {
         res.json({ success: true, message: 'Authentification réussie' });
     } else {
         res.status(401).json({ success: false, message: 'Mot de passe incorrect' });
