@@ -15,3 +15,5 @@ npm-debug.log*
 
 # Anciens fichiers temporaires
 *.py
+backend/coverage/
+coverage/
